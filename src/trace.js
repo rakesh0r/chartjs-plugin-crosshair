@@ -265,7 +265,7 @@ export default function(Chart) {
 
 		beforeTooltipDraw: function(chart) {
 			// suppress tooltips on dragging
-			return !chart.crosshair.dragStarted && !chart.crosshair.suppressTooltips;
+			return chart && chart.crosshair && !chart.crosshair.dragStarted && !chart.crosshair.suppressTooltips;
 		},
 
 		resetZoom: function(chart) {
